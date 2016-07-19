@@ -6,7 +6,7 @@ a{color:#333;text-decoration: none;}
 a:hover{color: #b81c22;cursor: pointer;}
 ul li{list-style:none;}
 ul,ol {list-style: none}
-img{display: block;}
+img{display: block;border:0;}
 fieldset,img,button{border: 0}
 /*h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}*/
 table{border-collapse: collapse;border-spacing:0;}

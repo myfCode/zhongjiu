@@ -91,6 +91,7 @@
 	border:3px solid #b81c22;
 	float: left;
 	padding: 0 5px;
+	outline: none;
 }
 .btn{
 	width: 75px;
@@ -118,8 +119,9 @@
 	width: 140px;
 	height: 38px;
 	border:1px solid #e6e3d3;
-	margin-top: 10px;
-	margin-right: 20px;
+	/*margin-top: 10px;
+	margin-right: 20px;*/
+	margin:10px 20px 0px 10px;
 	float: right;
 }
 .cart_up{
@@ -181,7 +183,7 @@
 	width: 200px;
 	z-index: 1000000000;
 }
-.menu_two_ul>li{
+.menu_two_ul li{
 	height:59px;
 	background: #313131;
 	line-height: 59px;
@@ -190,9 +192,8 @@
 }
 .menu_two_ul li:hover{
 	background: #b81c22;
-	/*cursor: pointer;*/
 }  
-.menu_two_ul>li a{
+.menu_two_ul li a{
 	color:#fff;
 	font-size: 14px;
 }
@@ -227,6 +228,8 @@
 	left:200px;
 	top:0px;
 	padding:10px 20px;
+	background:#fff;
+	z-index: 99999999;
 	display: none;
 }
 /*三级菜单左侧*/
@@ -243,7 +246,7 @@
 	color:#000;
 	height: 35px;
 	line-height: 30px;
-	/*border-bottom:1px solid #313131 ;*/
+	border-bottom:1px solid #313131 ;
 }
 .band_name{
 	border-top:1px solid #313131;
@@ -252,36 +255,26 @@
 	padding:10px 0px;
 }
 .band_name ul li{
-	/*background: #fff;
-	border-bottom: 0;*/
 	float: left;
 	line-height:20px;
 	width:85px;
 	height:25px;
 	padding:0px;
+	background: #fff;
+	border-bottom: 0;
 }
 .band_name ul li a{
 	color:#333;
 	font-size: 12px;
+
 }
 .band_name ul li a:hover{
 	color: #b81c22;
-	cursor: pointer; 
-}
-#c{
-	color:#000;
-}
-#aaa a:hover{
-		color: #b81c22;
-	cursor: pointer; 
+	cursor: pointer;
 }
 /*促销活动，三级菜单右侧*/
 .menu_thr_r{
 	float: right;
-}
-.menu_thr_r a{
-	display: block;
-	margin-bottom: 5px;
 }
 .menu_thr_r a img{
 	display: block;
@@ -300,7 +293,9 @@
 	font-size: 16px;
 	font-weight: bold;
 	padding:0px 15px;
-
+}
+.menu_nav ul li a:hover{
+	cursor:pointer;
 }
 /*menu_notice*/
 .menu_wrap{
@@ -309,21 +304,23 @@
 .menu_notice{
 	position: absolute;
 	top:42px;
-	left:940px;
-	width: 240px;
+	right:0px;
+	width: 200px;
 	height: 360px;
 	z-index: 1000000000;
 }
 .menu_notice p{
 	height: 35px;
 	line-height: 35px;
-	padding:0px 5px;
+	padding:0px 10px;
+	font-size:14px;
+	background: #fff;
 }
 .menu_notice p span{
 	float: left;
 }
 .menu_notice p a{
-	float: right;
+	float:right;
 }
 #icon_notice{
 	display: inline-block;
@@ -333,13 +330,24 @@
 	background-position: -240px -80px;	
 	vertical-align: middle;
 	float: left;
+	margin-top: 8px;
+	margin-right: 5px;
 }
 .notice dt{
-
+	height: 135px;
+	padding: 10px 10px 0px;
+	background: #fff9e9;
+}
+.notice dt a{
+	display: block;
+	padding:5px 0px;
 }
 .notice dd{
-	width:240px;
-	height:;
+	width:200px;
+	height: 180px;
+}
+.notice_first{
+	color:#b81c22;
 }
 /*banner轮播图*/
 .banner{
@@ -365,4 +373,458 @@
 }
 #banner_first{
 	z-index: 2;
+}
+.bannerIndex{
+	position: absolute;
+	bottom:10px;
+	z-index: 10000000000;
+}
+.bannerIndex span{
+	display:inline-block;
+	width: 21px;
+	height: 20px;
+	background: url(../img/icon_index.png) no-repeat;
+	background-position: 1px -400px;
+	margin: 0 5px;
+	color:#fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+}
+.bannerIndex span:hover{
+	cursor:pointer;
+}
+.bannerIndex span.backChange{
+	background-position: -79px -400px;
+}
+/*品牌特卖bandDiscount*/
+.saleTitle{
+	margin:15px 0px;
+}
+.saleTitle h1{
+	font-weight: normal;
+	float: left;
+}
+.saleTitle p{
+	float: left;
+	background: url(../img/bg-slash.jpg) repeat-x 0 center;
+	width: 810px;
+	height:36px;
+	margin:0px 10px;
+}
+.saleTitle a{
+	float: right;
+	display: inline-block;
+	height:36px;
+	width:64px;
+	text-align: center;
+	line-height: 28px;
+	/*border:1px solid red;*/
+	margin:5px 10px 0px;
+}
+.saleTitFirst{
+	color:#fff;
+	background: url(../img/icon_index.png) no-repeat;
+	background-position: -320px -80px;
+}
+.saleTitle a{
+	font-size: 14px;
+}
+.saleContent{
+	overflow: hidden;
+}
+.saleContent ul {
+	width: 1300px;
+	height: 180px;
+}
+
+.saleContent ul li{
+	float: left;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.discountContent ul li{
+	width:280px;
+	height: 180px;
+}
+.discountContent ul li a img{
+	display: block;
+	width: 280px;
+	height: 180px;
+	position: relative;
+}
+#icon_clock{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/icon_index.png) no-repeat ;
+	background-position: -0px -242px;	
+	vertical-align: middle;
+	float: left;
+	margin:10px 8px 0px;
+}
+#timeLeft{
+	float: left;
+	margin:10px 3px 0px;
+}
+.timeToBuyTit p{
+	width:720px;
+}
+.timeToBuyCont ul li{
+	padding-top:15px;
+	border:1px solid #d7d7d7;
+	width:178px;
+}
+.timeToBuyCont img{
+	display: block;
+	width: 178px;
+	
+}
+.namePrice{
+	padding:12px ;
+	width:138px;
+}
+.namePrice p{
+	margin-bottom: 15px;
+}
+.price{
+	color:#b81c22;
+	font-size:16px;
+	margin-right: 7px;
+}
+.buy{
+	display: inline-block;
+	width: 65px;
+	height: 25px;
+	background:#b81c22;
+	color:#fff;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+}
+/*白酒*/
+/*title*/
+.title{
+	padding:20px 0px 10px;
+	height:36px;
+	position: relative;
+}
+.title span,.title h1{
+	float: left;
+}
+.title h1{
+	font-weight: normal;
+	margin-left: 8px;
+}
+.title ul,.title a{
+	float: right;
+	font-size: 16px;
+	color:#666;
+}
+.icon_wine{
+	display: block;
+	width: 30px;
+	height: 34px;
+	background: url(../img/icon_index.png) no-repeat;
+}
+.icon_white{
+	background-position: -80px -240px;
+}
+.title ul li{
+	float: left;
+	padding:0px 20px;
+	height: 36px;
+	line-height: 36px;
+	
+}
+.title ul li:hover{
+	color:#b81c22;
+	cursor:pointer;
+	font-weight: bold;
+}
+.title a{
+	padding:0 20px;
+	margin-top: 7px;
+}
+.title a:hover{
+	color:#b81c22;
+	cursor: pointer;
+}
+/*横线、移动箭头*/
+.line{
+	height: 0;
+	border: 1px solid #b81c22;
+	position: relative;
+}
+.arrow{
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-width: 0px 4px 5px;
+	border-color: transparent transparent #b81c22 transparent;
+	border-style:solid;
+	top:-6px;
+	left:680px;
+}
+/*content*/
+.content{
+	height:560px;
+}
+/*content_l*/
+.content_l{
+	width: 200px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+.content_l ul{
+	background: #6dd1f3;
+	padding:20px 0px 0px 20px;
+}
+.content_l ul li{
+	height: 26px;
+	width: 70px;
+	margin:0px 20px 20px 0px;
+	position: relative;
+	float: left;
+}
+.content_l ul li a{
+	display: block;
+	height: 26px;
+	width: 70px;
+	border-radius: 15px;
+	background: #76eeff;
+	position: absolute;
+	z-index: 10;
+	color:#fff;
+	line-height: 26px;
+	text-align: center;
+}
+.content_l ul li a:hover{
+	width: 76px;
+	height: 30px;
+	left: -3px;
+	top:-2px;
+	font-size:14px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: underline;
+}
+.content_l img{
+	height: 370px;
+	width: 200px;
+}
+/*content_c*/
+.content_c{
+	width: 800px;
+	height: 560px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.content_c>div{
+	width: 800px;
+	height: 560px;
+	position: absolute;
+}
+.content_c div ul li{
+	float: left;
+	position: relative;
+	width:179px;
+	height: 259px;
+	border-right:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;
+	padding:10px;
+}
+.wineImg{
+	width: 180px;
+}
+.sales{
+	position: absolute;
+	left:1px;
+	top:0;
+}
+.details{
+	padding:20px 10px;
+}
+.details p{
+	margin-bottom: 15px;
+}
+/*content_r*/
+.content_r{
+	float: right;
+	width: 180px;
+	height: 560px;
+}
+.content_r img{
+	width:180px;
+	height:280px;
+}
+/*酒品牌连接wineBrand*/
+.wineBrand{
+	border:1px solid #d7d7d7;
+	height: 64px;
+	margin-top: 20px;
+}
+.wineBrand ul li{
+	float: left;
+	width:100px;
+	height: 64px;
+	position: relative;
+}
+#brand_last{
+	width:78px;
+}
+
+.wineBrand ul li img{
+	width:100%;
+	height: 100%;
+}
+.wineBrand ul li a{
+	display: none;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	line-height: 64px;
+	text-align: center;
+	color:#fff;
+}
+.wineBrand ul li:hover a{
+	display: block;
+	background: #4c4c4c;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+/*品质服务service*/
+.service{
+	background: #f2f2f2;
+	margin-top: 40px;
+}
+.serv{
+	padding:30px 0px 30px 40px;
+	width: 1120px;
+
+}
+.serv dl{
+	float: left;
+	margin-right: 90px;
+}
+.serv dl dt{
+	width: 76px;
+	height: 76px;
+	background: url(../img/icon_index.png) no-repeat;
+	margin:0 auto;
+}
+.serv .pinzhi {
+	background-position: 0px -320px;
+}
+.serv dl dd{
+	text-align: center;
+}
+.serv dl dd h2{
+	margin: 15px 0 10px;
+	font-size:16px;	
+}
+.serv dl dd p{
+	color:#666;
+}
+.serv .jiulei {
+	background-position: -80px -320px;
+}
+.serv .tuihuo {
+	background-position: -160px -320px;
+}
+.serv .peisong {
+	background-position: -240px -320px;
+}
+.serv .koubei {
+	background-position: -320px -320px;
+}
+.serv .fuwu {
+	background-position: -400px -320px;
+}
+/*guide指南、微信*/
+/*指南*/
+.guide{
+	padding:40px 0px 60px;
+}
+/*guide左侧guide_l*/
+.guide_l{
+	float: left;
+}
+.guide_l ul{
+	float: left;
+	margin-right: 100px;
+}
+.guide_l ul h3{
+	padding-bottom: 5px;
+}
+.guide_l ul li{
+	margin-top: 5px;
+}
+.guide span{
+	float: left;
+	width:1px;
+	height: 120px;
+	background: #666;
+}
+/*guide右侧guide_r*/
+.guide_r{
+	float: right;
+}
+.guide_r dl{
+	float: left;
+	margin-left: 65px;
+}
+.guide_r dl dt{
+	padding-left:5px;
+}
+.guide_r dl dd{
+	text-align: center;
+}
+.guide_r dd img{
+	width: 77px;
+	height: 77px;
+	margin: 10px 0px;
+}
+/*bottom*/
+.bottom{
+	width:100%;
+	height:40px;
+	background: #313131;
+	text-align:center;
+	line-height: 40px;
+}
+.bottom a,.bottom span{
+	color:#fff;
+	font-size:14px;
+	
+}
+.bottom span{
+	padding:0px 10px;
+}
+/*footer*/
+.footer{
+	text-align: center;
+	width: 100%;
+}
+.footer p{
+	margin: 20px 0px 40px;
+	color:#666;
+}
+.footer span{
+	margin-bottom: 30px;
+	color:#666;
+}
+.beian{
+	margin: 15px auto 40px;
+	width: 670px;
+	height: 40px;
+
+}
+.beian img{
+	width: 670px;
+	height: 40px;
 }
