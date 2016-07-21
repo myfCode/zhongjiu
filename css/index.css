@@ -2,8 +2,8 @@
 /*adv广告*/
 .adv{
 	width: 100%;
-	background: url(../img/adv.jpg) no-repeat;
-	background-size: 100% 100%;
+	background: url(../img/adv.jpg) no-repeat center;
+	/*background-size: 100% 100%;*/
 	height: 90px;
 }
 .adv a{
@@ -22,6 +22,9 @@
 .login_l,.login_c,.login_r{
 	height: 30px;
 	line-height: 30px;
+}
+.login_color{
+	color:#B81C22;
 }
 .login a {
 	margin-right:20px;
@@ -119,10 +122,9 @@
 	width: 140px;
 	height: 38px;
 	border:1px solid #e6e3d3;
-	/*margin-top: 10px;
-	margin-right: 20px;*/
 	margin:10px 20px 0px 10px;
 	float: right;
+	position: relative;
 }
 .cart_up{
 	width: 140px;
@@ -137,15 +139,19 @@
 	background: url(../img/icon_index.png) no-repeat;
 	vertical-align: middle;
 	background-position: 0 -80px;
+	margin-right: 5px;
 }
-.cart_up a:hover .cart_up{
-	/*height:40px;*/
+.cart:hover .cart_up{
+	height:40px;
 	border-bottom: 0;
 }
 .cart_down{
 	width:278px;
 	border:1px solid #e6e3d3;
 	display: none;
+	position: absolute;
+	right:0;
+	top:39px;
 }
 /*nav导航条*/
 .icon{
@@ -237,10 +243,10 @@
 	float: left;
 	width:530px;
 }
-.menu_band,.menu_species,.menu_origin{
+.menu_brand,.menu_species,.menu_origin{
 	width:530px;
 }
-.band{
+.brand{
 	font-size: 14px;
 	font-weight: bold;
 	color:#000;
@@ -248,13 +254,13 @@
 	line-height: 30px;
 	border-bottom:1px solid #313131 ;
 }
-.band_name{
+.brand_name{
 	border-top:1px solid #313131;
 	width:100%;
 	line-height: 30px;
 	padding:10px 0px;
 }
-.band_name ul li{
+.brand_name ul li{
 	float: left;
 	line-height:20px;
 	width:85px;
@@ -263,23 +269,31 @@
 	background: #fff;
 	border-bottom: 0;
 }
-.band_name ul li a{
+.brand_name ul li a{
 	color:#333;
 	font-size: 12px;
 
 }
-.band_name ul li a:hover{
-	color: #b81c22;
-	cursor: pointer;
+.brand_name ul li:hover{
+	background: #fff;
 }
+.brand_name ul li a:hover{
+	cursor: pointer;
+	color:#b81c22;
+}
+
 /*促销活动，三级菜单右侧*/
 .menu_thr_r{
 	float: right;
+}
+.menu_thr_r h4{
+	border:0;
 }
 .menu_thr_r a img{
 	display: block;
 	width: 180px;
 	height: 124px;
+	margin-bottom: 10px;
 }
 /*menu_nav*/
 .menu_nav ul li{
@@ -377,7 +391,7 @@
 .bannerIndex{
 	position: absolute;
 	bottom:10px;
-	z-index: 10000000000;
+	z-index: 999999;
 }
 .bannerIndex span{
 	display:inline-block;
@@ -387,17 +401,18 @@
 	background-position: 1px -400px;
 	margin: 0 5px;
 	color:#fff;
-	font-size: 14px;
+	font-size: 12px;
 	text-align: center;
 	line-height: 20px;
 }
 .bannerIndex span:hover{
 	cursor:pointer;
+	color:#B81C22;
 }
 .bannerIndex span.backChange{
 	background-position: -79px -400px;
 }
-/*品牌特卖bandDiscount*/
+/*品牌特卖brandDiscount*/
 .saleTitle{
 	margin:15px 0px;
 }
@@ -422,14 +437,16 @@
 	/*border:1px solid red;*/
 	margin:5px 10px 0px;
 }
-.saleTitFirst{
+.saleTitle a{
+	font-size: 14px;
+	color:#666;
+}
+.saleTitle .saleTitFirst{
 	color:#fff;
 	background: url(../img/icon_index.png) no-repeat;
 	background-position: -320px -80px;
 }
-.saleTitle a{
-	font-size: 14px;
-}
+
 .saleContent{
 	overflow: hidden;
 }
@@ -437,7 +454,6 @@
 	width: 1300px;
 	height: 180px;
 }
-
 .saleContent ul li{
 	float: left;
 	margin-right: 20px;
@@ -453,6 +469,7 @@
 	height: 180px;
 	position: relative;
 }
+/*限时抢购timetobuy*/
 #icon_clock{
 	display: inline-block;
 	width: 16px;
@@ -467,7 +484,7 @@
 	float: left;
 	margin:10px 3px 0px;
 }
-.timeToBuyTit p{
+.timeToBuyTitle p{
 	width:720px;
 }
 .timeToBuyCont ul li{
@@ -530,6 +547,15 @@
 .icon_white{
 	background-position: -80px -240px;
 }
+.icon_red{
+	background-position: -160px -240px;
+}
+.icon_foreign{
+	background-position: -240px -240px;
+}
+.icon_other{
+	background-position: -320px -240px;
+}
 .title ul li{
 	float: left;
 	padding:0px 20px;
@@ -564,7 +590,6 @@
 	border-color: transparent transparent #b81c22 transparent;
 	border-style:solid;
 	top:-6px;
-	left:680px;
 }
 /*content*/
 .content{
@@ -622,12 +647,12 @@
 	overflow: hidden;
 	position: relative;
 }
-.content_c>div{
+/*.content_c div{
 	width: 800px;
 	height: 560px;
 	position: absolute;
-}
-.content_c div ul li{
+}*/
+.content_c  ul li{
 	float: left;
 	position: relative;
 	width:179px;
@@ -645,10 +670,11 @@
 	top:0;
 }
 .details{
-	padding:20px 10px;
+	padding:10px;
 }
 .details p{
-	margin-bottom: 15px;
+	margin-bottom: 5px;
+	height:35px;
 }
 /*content_r*/
 .content_r{
