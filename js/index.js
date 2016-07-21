@@ -138,10 +138,10 @@
 					$('.whiteWine .arrow').css('left',left);
 					//对应的产品信息更换
 					var currentId = $(this).attr('id');
-					console.log(currentId);
+					// console.log(currentId);
 
 					for (var i = 0 ; i < data[currentId].price.length;i++) {
-					$(".white_cont_c .sales img").eq(i).attr({'src':data[currentId].sales[i]});
+						$(".white_cont_c .sales img").eq(i).attr({'src':data[currentId].sales[i]});
 						$(".white_cont_c .wineImg").eq(i).attr({'src':data[currentId].wineImg[i]});
 						$('.white_cont_c .details p').eq(i).text(data[currentId].name[i]);
 						$('.white_cont_c .details span').eq(i).text(data[currentId].price[i]);
@@ -169,7 +169,7 @@
 					$('.redWine .arrow').css('left',left);
 					//对应的产品信息更换
 					var currentId = $(this).attr('id');
-					console.log(currentId);
+					// console.log(currentId);
 
 					for (var i = 0 ; i < data[currentId].price.length;i++) {
 						$(".redWine .sales img").eq(i).attr({'src':data[currentId].sales[i]});
@@ -200,10 +200,10 @@
 					$('.foreignWine .arrow').css('left',left);
 					//对应的产品信息更换
 					var currentId = $(this).attr('id');
-					console.log(currentId);
+					// console.log(currentId);
 
 					for (var i = 0 ; i < data[currentId].price.length;i++) {
-					$(".foreignWine .sales img").eq(i).attr({'src':data[currentId].sales[i]});
+						$(".foreignWine .sales img").eq(i).attr({'src':data[currentId].sales[i]});
 						$(".foreignWine .wineImg").eq(i).attr({'src':data[currentId].wineImg[i]});
 						$('.foreignWine .details p').eq(i).text(data[currentId].name[i]);
 						$('.foreignWine .details span').eq(i).text(data[currentId].price[i]);
@@ -230,10 +230,10 @@
 					$('.otherWine .arrow').css('left',left);
 					//对应的产品信息更换
 					var currentId = $(this).attr('id');
-					console.log(currentId);
+					// console.log(currentId);
 
 					for (var i = 0 ; i < data[currentId].price.length;i++) {
-					$(".otherWine .sales img").eq(i).attr({'src':data[currentId].sales[i]});
+						$(".otherWine .sales img").eq(i).attr({'src':data[currentId].sales[i]});
 						$(".otherWine .wineImg").eq(i).attr({'src':data[currentId].wineImg[i]});
 						$('.otherWine .details p').eq(i).text(data[currentId].name[i]);
 						$('.otherWine .details span').eq(i).text(data[currentId].price[i]);

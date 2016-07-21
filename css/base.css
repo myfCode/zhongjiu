@@ -1,6 +1,6 @@
 body,html,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td { margin: 0;padding: 0;}
 body{background: #fff;}
-input{border:0;}
+input{border:0;outline: 0;}
 body,button,input,select,textarea {font: 12px/1.5 "Microsoft Sans serif", "MS Serif", Arial ,"微软雅黑","Microsoft YaHei";}
 a{color:#333;text-decoration: none;}
 a:hover{color: #b81c22;cursor: pointer;}
