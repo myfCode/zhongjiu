@@ -1,0 +1,46 @@
+{
+	"yangjiuremai":{
+				"sales":["../img/sales1.png","../img/sales2.png","../img/sales3.png","../img/sales4.png","../img/sales5.png","../img/sales6.png","../img/sales7.png","../img/sales8.png"],
+				"wineImg":["../img/tuijian1.jpg","../img/tuijian2.jpg","../img/tuijian3.jpg",
+							"../img/tuijian4.jpg","../img/tuijian5.jpg","../img/tuijian6.jpg",
+							"../img/tuijian7.jpg","../img/tuijian8.jpg"],
+				"name":["52°五粮液股份公司五星A珍品30 500ml(6瓶装)","52°五粮液 500ml",
+							"52°泸州老窖(窖藏龙窖) 500ml(6瓶装)","52°汾酒封坛原酒 1500ml",
+							"52°五粮液华彩人生30典藏(水晶盒)500ml(2瓶装)","53°一道泓酱香老酒 500ml(6瓶装)",
+							"52°五粮液永不分离精品500ml(6瓶装)","52°泸州老窖鉴赏级酒品御藏9 1880ml*2(2坛装)"],
+				"price":["￥419.00","￥729.00","￥229.00","￥99.00","￥219.00","￥219.00","￥149.00","￥240.00"]
+	},
+	"futejia":{
+				"sales":["","","","","../img/sales5.png","","",""],
+				"wineImg":["../img/tuijian1.jpg","../img/tuijian2.jpg","../img/tuijian3.jpg",
+							"../img/tuijian4.jpg","../img/tuijian5.jpg","../img/tuijian6.jpg",
+							"../img/tuijian7.jpg","../img/tuijian8.jpg"],
+				"name":["52°五粮液股份公司五星A珍品30 500ml(6瓶装)","52°五粮液 500ml",
+							"52°泸州老窖(窖藏龙窖) 500ml(6瓶装)","52°汾酒封坛原酒 1500ml",
+							"52°五粮液华彩人生30典藏(水晶盒)500ml(2瓶装)","53°一道泓酱香老酒 500ml(6瓶装)",
+							"52°五粮液永不分离精品500ml(6瓶装)","52°泸州老窖鉴赏级酒品御藏9 1880ml*2(2坛装)"],
+				"price":["￥419.00","￥729.00","￥229.00","￥99.00","￥219.00","￥219.00","￥149.00","￥240.00"]
+	},
+	"langmujiu":{
+				"sales":["../img/sales1.png","","","","","../img/sales6.png","",""],
+				"wineImg":["../img/tuijian1.jpg","../img/tuijian2.jpg","../img/tuijian3.jpg",
+							"../img/tuijian4.jpg","../img/tuijian5.jpg","../img/tuijian6.jpg",
+							"../img/tuijian7.jpg","../img/tuijian8.jpg"],
+				"name":["52°五粮液股份公司五星A珍品30 500ml(6瓶装)","52°五粮液 500ml",
+							"52°泸州老窖(窖藏龙窖) 500ml(6瓶装)","52°汾酒封坛原酒 1500ml",
+							"52°五粮液华彩人生30典藏(水晶盒)500ml(2瓶装)","53°一道泓酱香老酒 500ml(6瓶装)",
+							"52°五粮液永不分离精品500ml(6瓶装)","52°泸州老窖鉴赏级酒品御藏9 1880ml*2(2坛装)"],
+				"price":["￥419.00","￥729.00","￥229.00","￥99.00","￥219.00","￥219.00","￥149.00","￥240.00"]
+	},
+	"weishiji":{
+				"sales":["../img/sales2.png","","","../img/sales4.png","","","../img/sales7.png",""],
+				"wineImg":["../img/tuijian1.jpg","../img/tuijian2.jpg","../img/tuijian3.jpg",
+							"../img/tuijian4.jpg","../img/tuijian5.jpg","../img/tuijian6.jpg",
+							"../img/tuijian7.jpg","../img/tuijian8.jpg"],
+				"name":["52°五粮液股份公司五星A珍品30 500ml(6瓶装)","52°五粮液 500ml",
+							"52°泸州老窖(窖藏龙窖) 500ml(6瓶装)","52°汾酒封坛原酒 1500ml",
+							"52°五粮液华彩人生30典藏(水晶盒)500ml(2瓶装)","53°一道泓酱香老酒 500ml(6瓶装)",
+							"52°五粮液永不分离精品500ml(6瓶装)","52°泸州老窖鉴赏级酒品御藏9 1880ml*2(2坛装)"],
+				"price":["￥419.00","￥729.00","￥229.00","￥99.00","￥219.00","￥219.00","￥149.00","￥240.00"]
+	}
+}
