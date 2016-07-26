@@ -1,8 +1,19 @@
 //dom加载完成执行	
 	$(document).ready(function(){
 		
+		// 用户登录信息
+		var current = $.cookie('current');
+		if (current) {
+			$('.user').html('欢迎用户'+current).css("color","#b81c22").append($("<a class='quit' href='javascript:;'>退出登录</a>"));
+			$('.quit').css('marginLeft',20).click(function(){
+				$('.user').html('<a href="login.html">请登录</a><a href="register.html" class="login_color">注册</a>');
+			});
+
+		}
+
+
 		//三级导航
-		console.log($('.menu_two_ul>li').get());
+		// console.log($('.menu_two_ul>li').get());
 		$('.menu_two_ul>li').hover(function(){
 			$(this).find('.menu_three').show();
 		},function(){
@@ -27,7 +38,7 @@
 		// 定义存取原始宽度高度
 		var width=$('.discountContent ul li a img').eq(0).width();
 		var height=$('.discountContent ul li a img').eq(0).height();
-		//移入变大移出变小事件
+		//品牌特卖鼠、标移入变大移出变小事件
 		$('.discountContent ul li a img').hover(function(){
 				$(this).stop().animate({
 					'width':width+20,
@@ -129,9 +140,15 @@
 			type:'get',
 			url:"../data/whiteWine.json",
 			success:function(data){
-//				alert(1);
-				$('.white_tab li').mouseover(function(){
-					
+				// alert(1);
+				// 动态加载
+				// for (var i = 0 ; i < data.baopintuijian.price.length;i++) {
+				// 	$(".white_cont_c .sales img").eq(i).attr({'src':data.baopintuijian.sales[i]});
+				// 	$(".white_cont_c .wineImg").eq(i).attr({'src':data.baopintuijian.wineImg[i]});
+				// 	$('.white_cont_c .details p').eq(i).text(data.baopintuijian.name[i]);
+				// 	$('.white_cont_c .details span').eq(i).text(data.baopintuijian.price[i]);
+				// }
+				$('.white_tab li').not("#baopintuijian").mouseover(function(){
 					// 白酒arrow箭头
 					var left = $(this).position().left+parseInt($(this).innerWidth() /2);
 					// console.log(left);
@@ -153,7 +170,64 @@
 				alert("error");
 			}
 		})
-		
+
+		// 试验test whiteList.json
+		$.ajax({
+			type:"get",
+			url:'../data/whiteList.json',
+			success:function(data){
+				// alert('sucess(whiteList)');
+				// console.log(data);
+				$('.white_cont_c ul').empty();
+				for(var key in data){
+					var html = '<li id="'+key+'"><a href="goodDetail.html" target="_blank"><div class="sales"><img src="'+data[key].discount
+								+'" alt=""></div><img class="wineImg" src="'+data[key].src
+								+'" alt=""><div class="details"><p>'+data[key].name
+								+'</p><span class="price">￥'+data[key].price
+								+'</span></div></a></li>'
+								// console.log(html);
+					$('.white_cont_c ul').append(html);
+				}
+				$('#baopintuijian').mouseover(function(){
+					// 白酒arrow箭头
+					var left = $(this).position().left+parseInt($(this).innerWidth() /2);
+					// console.log(left);
+					$('.whiteWine .arrow').css('left',left);
+					$('.white_cont_c ul').empty();
+					for(var key in data){
+						var html = '<li id="'+key+'"><a href="goodDetail.html"><div class="sales"><img src="'+data[key].discount
+									+'" alt=""></div><img class="wineImg" src="'+data[key].src
+									+'" alt=""><div class="details"><p>'+data[key].name
+									+'</p><span class="price">￥'+data[key].price
+									+'</span></div></a></li>'
+									// console.log(html);
+						$('.white_cont_c ul').append(html);
+					}
+					$('.white_cont_c ul li a').click(function(e){
+						e.preventDefault();
+						var goodId = $(this).parent().attr('id');
+						// console.log(goodId);
+						$.cookie("goodId",goodId,{expries:10,path:"/"});
+						// console.log($.cookie("goodId"));
+						location.href="goodDetail.html";
+					})
+				})
+
+				// 点击进入商品详情页
+				$('.white_cont_c ul li a').click(function(e){
+					e.preventDefault();
+					var goodId = $(this).parent().attr('id');
+					// console.log(goodId);
+					$.cookie("goodId",goodId,{expries:10,path:"/"});
+					// console.log($.cookie("goodId"));
+					location.href="goodDetail.html";
+				})
+
+			},
+			error:function(){
+				alert('error(whiteList.json)');
+			}
+		})
 		
 		//红酒产品信息
 		$.ajax({
@@ -246,7 +320,45 @@
 			}
 		})
 		
-		
+
+
+		//楼梯
+
+		$('.shopLayer li').click(function(){
+			var index = $(this).index();
+			$('.shopLayer li span').removeClass('current').eq(index).addClass('current').show();
+			// console.log($(".shopLayer li span").get());
+			// $(this).find('span').addClass('current').show();
+			
+			$(window).scrollTop($('.stairs').eq(index).offset().top);
+		})
+		var arrTop=[];
+		for (var i = 0; i < $('.stairs').size(); i++) {
+			arrTop.push($($('.stairs')[i]).offset().top);
+		}
+		// console.log(arrTop);
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			// console.log(parseInt($(window).height()/2))
+			// for (var i = 0; i < arrTop.length; i++) {
+			// 	console.log(i);
+			// 	if (scrollTop <= arrTop[i] - parseInt($(window).height()/2) ) {
+			// 		var index = i;
+			// 		break;
+			// 	}
+			// }
+			// console.log(index);
+			// $('.shopLayer li span').removeClass('current').eq(index).addClass('current').show();
+			$('.stairs').each(function(){
+				if (scrollTop >= $(this).offset().top ) {
+					// console.log($(this).index('.stairs'));
+					$('.shopLayer li span').removeClass('current').eq($(this).index('.stairs')).addClass('current').show();
+					// return false;
+				}
+			})
+			
+		})
+
 	})
 
 

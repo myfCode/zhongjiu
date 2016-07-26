@@ -1,0 +1,189 @@
+.wrap{
+	width:1000px;
+	margin:0 auto;
+}
+body{
+	min-height: 670px;
+}
+/*header*/
+.header{
+	padding:40px 0px 50px;
+	background: #f7f7f7;
+	height：60px;
+}
+/*header_l*/
+.header_l{
+	float: left;
+	height:60px;
+}
+.header_l span{
+	float: left;
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	font-size:20px;
+	color:#626262;
+}
+.logo{
+	width:190px;
+	background: url(../img/icon_reg.png) no-repeat;
+	background-position: -110px -104px;
+	margin-left: 20px;
+}
+.line{
+	width: 1px;
+	background: #d2d0d3;
+	margin: 0px 15px;
+}
+/*header_r*/
+.header_r{
+	float: right;
+	height: 60px;
+	line-height: 60px;
+}
+.icon_img{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: url(../img/icon_reg.png) no-repeat;
+	vertical-align: middle;
+	margin-left: 50px;
+}
+.text{
+	margin-left: 5px;
+	color:#313131;
+	font-size: 14px;
+}
+.icon_zheng{
+	background-position: -389px -59px;
+}
+.icon_che{
+	background-position: -389px -90px;
+}
+.icon_smile{
+	background-position: -389px -121px;
+}
+
+/*register*/
+.register{
+	background: #f7f7f7;
+}
+.reg_img{
+	float: left;
+}
+.reg_img img{
+	width: 540px;
+	height: 400px;
+	margin-right: 90px;
+}
+.reg_form{
+	float: left;
+	width: 350px;
+}
+.reg_form p{
+	text-align: right;
+	padding-bottom: 10px;
+	font-size:14px;
+	width:310px;
+}
+.reg_form  a{
+	color: #c8030a;
+	cursor: pointer;
+	font-size:14px;
+}
+.reg_form input{
+	border:1px solid #cfcfd1;
+	border-radius: 3px;
+	height:18px;
+	padding:10px;
+	margin-bottom: 20px;
+}
+.long{
+	width: 278px;
+}
+.short{
+	width: 118px;
+}
+/*验证码*/
+.test input{
+	float: left;
+}
+.code{
+	float: left;
+	height: 38px;
+	background: pink;
+	border:1px solid green;
+	margin: 0px 5px;
+	border-radius: 3px;
+	user-select:none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select:none;
+	-o-user-select:none;
+}
+.code li{
+	float: left;
+	font-size:20px;
+	width:20px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+.test span{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size:14px;
+	color:#666;
+}
+.test span:hover{
+	color: #c8030a;
+	cursor: pointer;
+}
+.reg_form .button{
+	border:1px solid #cfcfd1;
+	background: url(../img/icon_reg.png) no-repeat -56px -220px;
+	width: 138px;
+	height: 38px;
+	margin-left: 10px;
+	border-radius: 3px;
+	color:#666;
+}
+.button:hover{
+	cursor: pointer;
+}
+.reg_form .submit{
+	height: 40px;
+	width: 140px;
+	background: url(../img/icon_reg.png) no-repeat -34px -64px;
+	color:#fff;
+	font-size:14px;
+}
+.submit:hover{
+	cursor: pointer;
+}
+/*bootom*/
+.bottom{
+	width:100%;
+	color:#898989;
+	padding-bottom:10px;
+	
+}
+.bottom_box{
+	position: relative;
+	height: 85px;
+	font-size:14px;
+}
+.bottom a{
+	color:#898989;
+	font-size:14px;
+}
+.bottom a:hover{
+	color:#b81c22;
+}
+.bottom_cont{
+	position: absolute;
+	width: 100%;
+	bottom:0;
+	text-align: center;
+}

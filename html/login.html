@@ -8,6 +8,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../css/common/reg_login.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
+	<script type="text/javascript" src='../libs/jquery.cookie.js'></script>
 	<script type="text/javascript" src="../js/login.js"></script>
 	<!-- <script type="text/javascript" src='../js/common/reg_login.js'></script> -->
 </head>
@@ -35,9 +36,9 @@
 				<a href=""><img src="../img/denglu.jpg" alt=""></a>
 			</div>
 			<div class="log_form">
-				<form action="login.html">
-					<input class="long" type="text" name="" placeholder="
-邮箱/手机号/用户名"><br />
+				<form action="index.html">
+					<input class="long account" type="text" name="" placeholder="
+请输入手机号"><br />
 					<input class="long" type="password" placeholder="请输入密码"><br />		
 					<input class="checkbox" type="checkbox" name="">&nbsp;&nbsp;记住用户名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="forgetPwd">忘记密码？</a><br />
 					<input class="submit" type="submit" name="" value="登录"><a href="register.html">30秒注册>></a>
@@ -53,9 +54,11 @@
 		
 	</div>
 	<div class="bottom">
-		<div class="wrap">
+		<div class="wrap bottom_box">
+			<div class="bottom_cont">
 				<p>Copyright&nbsp;© &nbsp;2011-2013 中酒网(www.zhongjiu.cn) &nbsp;版权所有&nbsp;&nbsp;<a href="#">京ICP备12022216号-2</a></p>
 				<span>购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</span>
+			</div>
 		</div>
 	</div>
 </body>

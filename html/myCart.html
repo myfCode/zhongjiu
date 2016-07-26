@@ -3,8 +3,95 @@
 <head>
 	<meta charset="UTF-8">
 	<title>myCart</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/myCart.css">
+	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
+	<script type="text/javascript" src="../libs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/myCart.js"></script>
 </head>
 <body>
-	
+	<div class="header">
+		<div class="wrap">
+			<div class="header_l">
+				<span class="icon_collect"></span>
+				<a href="javascript:;">收藏网站</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				欢迎来到
+				<a href="index.html" class="toIndex">中酒网</a>
+			</div>
+			<div class="header_r">
+				<ul>
+					<li class="first">[<a href="login.html" class="current">请登录</a>]&nbsp;&nbsp;&nbsp;[<a class="quit" href="javascript:;">退出</a><a class="userRegister" href="register.html">用户注册</a>]</li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">投诉直达</a></li>
+					<li><a href="">网站导航</a></li>
+					<li>订单热线：<span class="hotLine">400-798-9999</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="logo wrap clear">
+		<div class="logoImg"></div>
+		<div class="cartProcess">
+			<img src="../img/cartProcess.png" alt="">
+		</div>
+	</div>
+	<div class="cart wrap">
+		<h1>我的购物车</h1>
+		<div class="cartEmpty">
+			<span class="icon_no"></span>
+			<p>购物车内暂时没有商品，去<a href="index.html" style="color:#b81c22;">首页</a>挑选喜欢的商品</p>
+		</div>
+		<table>
+			<thead>
+				<tr class="bg">
+					<th style="width:450px;">选购的商品</th>
+					<th style="width:130px;">单价（元）</th>
+					<th style="width:148px;">购买数量</th>
+					<th style="width:130px;">金额小计</th>
+					<th style="width:140px;">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- <tr class="shopList">
+					<td><a href=""><img src="../img/yugao2.jpg" alt=""></a><a href="">53°茅台迎宾酒（旧包装） 500ml（6瓶装）<span class="tips">[闪购商品]</span></a></td>
+					<td>￥<span class="price">359.00</span></td>
+					<td><span class="decrease"></span><input class="num" type="text" name="" value="1"><span class="increase"></span></td>
+					<td>￥<span class="sum"></span></td>
+					<td><a href="">加入收藏夹</a><br /><a class="remove" href="javascript:;">移除</a></td>
+				</tr> -->
+				<!-- <tr class="shopList">
+					<td><a href=""><img src="../img/yugao3.jpg" alt=""></a><a href="">52°五粮液华彩人生30典藏 &nbsp;&nbsp;500ml<span class="tips">[特价]</span></a></td>
+					<td>￥<span class="price">79.00</span></td>
+					<td><span class="decrease"></span><input class="num" type="text" name="" value="1"><span class="increase"></span></td>
+					<td>￥<span class="sum"></span></td>
+					<td><a href="">加入收藏夹</a><br /><a class="remove" href="javascript:;">移除</a></td>
+				</tr>
+				<tr class="bg gift">
+					<td><span class="gift1">[赠品]&nbsp;&nbsp;</span><a href="">中酒网无纺布购物袋</a></td>
+					<td></td>
+					<td><span class="giftNum">1</span></td>
+					<td></td>
+					<td></td>
+				</tr> -->
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><a href="index.html" class="goShopping">继续购物</a></td>
+					<td></td>
+					<td></td>
+					<td><span class="totalNum">3</span>件商品&nbsp;&nbsp;&nbsp;总计金额</td>
+					<td></td>
+				</tr>
+				<tr class="bg last">
+					<td colspan="3" align="right">应付商品金额（不含运费）：</td>
+					<td ><b>￥<span class="total">438.00</span></b></td>
+					<td class="skip"><a href="pay.html" class="goToPay">去结算</a></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="recommend wrap"></div>
+	<div class="bottom"></div>
 </body>
 </html>

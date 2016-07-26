@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
 	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
 	<script type="text/javascript" src='../libs/move.js'></script>
+	<script type="text/javascript" src="../libs/jquery.cookie.js"></script>
 	<script type="text/javascript" src="../js/index.js"></script>
 </head>
 <body>
@@ -25,8 +26,10 @@
 				<span class="icon_home"></span>
 				<a href="shopDetail.html">中酒首页</a>
 				Hi,欢迎来中酒   &nbsp;&nbsp;&nbsp;
-				<a href="login.html">请登录</a>
-				<a href="register.html" class="login_color">注册</a>
+				<div class="user">
+					<a href="login.html">请登录</a>
+					<a href="register.html" class="login_color">注册</a>
+				</div>
 			</div>
 			<!-- 右侧 -->
 			<div class="login_r">
@@ -74,7 +77,7 @@
 		<div class="cart">
 			<div class="cart_up">
 				<span class="cart_img"></span>
-				<a href="cart.html">我的购物车</a>
+				<a href="myCart.html">我的购物车</a>
 			</div>
 			<div class="cart_down">
 				<h3></h3>
@@ -216,8 +219,8 @@
 								</div>
 								<div class="menu_thr_r">
 									<h4 class="brand">促销活动</h4>
-									<a href="#"><img src="../img/sales1.jpg" alt=""></a>
-									<a href="#"><img src="../img/sales2.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales3.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales4.jpg" alt=""></a>
 								</div>
 							</div>
 						</li>
@@ -274,8 +277,8 @@
 								</div>
 								<div class="menu_thr_r">
 									<h4 class="brand">促销活动</h4>
-									<a href="#"><img src="../img/sales1.jpg" alt=""></a>
-									<a href="#"><img src="../img/sales2.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales5.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales6.jpg" alt=""></a>
 								</div>
 							</div>
 						</li>
@@ -323,8 +326,8 @@
 								</div>
 								<div class="menu_thr_r">
 									<h4 class="brand">促销活动</h4>
-									<a href="#"><img src="../img/sales1.jpg" alt=""></a>
-									<a href="#"><img src="../img/sales2.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales7.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales8.jpg" alt=""></a>
 								</div>
 							</div>
 						</li>
@@ -373,8 +376,8 @@
 								</div>
 								<div class="menu_thr_r">
 									<h4 class="brand">促销活动</h4>
-									<a href="#"><img src="../img/sales1.jpg" alt=""></a>
-									<a href="#"><img src="../img/sales2.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales9.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales10.jpg" alt=""></a>
 								</div>
 							</div>
 						</li>
@@ -421,8 +424,8 @@
 								</div>
 								<div class="menu_thr_r">
 									<h4 class="brand">促销活动</h4>
-									<a href="#"><img src="../img/sales1.jpg" alt=""></a>
-									<a href="#"><img src="../img/sales2.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales11.jpg" alt=""></a>
+									<a href="#"><img src="../img/sales12.jpg" alt=""></a>
 								</div>
 							</div>
 						</li>
@@ -486,12 +489,10 @@
 				<span>10</span>
 				<span>11</span>
 			</div>
-		</ul>
-		
+		</ul>	
 	</div>
-	
 	<!-- 品牌特卖brandDiscount -->
-	<div class="brandDiscount wrap">
+	<div class="brandDiscount wrap stairs">
 		<div class="discountTitle saleTitle clear">
 			<h1>品牌特卖</h1>
 			<p></p>
@@ -509,7 +510,7 @@
 		</div>
 	</div>
 	<!-- 限时抢购timeToBuy -->
-	<div class="timeToBuy wrap">
+	<div class="timeToBuy wrap stairs">
 		<div class="saleTitle timeToBuyTitle clear">
 			<h1>限时抢购 &nbsp;|</h1>
 			<span id="icon_clock"></span>
@@ -578,7 +579,7 @@
 		</div>
 	</div>
 	<!-- 白酒 -->
-	<div class="whiteWine wrap">
+	<div class="whiteWine wrap stairs">
 		<div class="title">
 			<span class="icon_wine icon_white"></span>
 			<h1>白酒</h1>
@@ -609,86 +610,7 @@
 			</div>
 			<div class="content_c white_cont_c">
 				<ul>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="sales"><img src="../img/sales1.png" alt=""></div>
-							<img class="wineImg" src="../img/whiteImg1.jpg" alt="">
-							<div class="details">
-								<p>52° 五粮液 500ml</p>
-								<span class="price">￥729.00</span>
-							</div>
-						</a>
-					</li>
+					
 				</ul>
 			</div>
 			<div class="content_r">
@@ -738,7 +660,7 @@
 		</div>
 	</div>
 	<!-- 红酒 -->
-	<div class="redWine wrap">
+	<div class="redWine wrap stairs">
 		<div class="title">
 			<span class="icon_wine icon_red"></span>
 			<h1>红酒</h1>
@@ -897,7 +819,7 @@
 		</div>
 	</div>
 	<!-- 洋酒 -->
-	<div class="foreignWine wrap">
+	<div class="foreignWine wrap stairs">
 		<div class="title">
 			<span class="icon_wine icon_foreign"></span>
 			<h1>洋酒</h1>
@@ -1054,7 +976,7 @@
 		</div>
 	</div>
 	<!-- 其他 -->
-	<div class="otherWine wrap">
+	<div class="otherWine wrap stairs">
 		<div class="title">
 			<span class="icon_wine icon_other"></span>
 			<h1>其他</h1>
@@ -1333,13 +1255,30 @@
 		<span>|</span>
 		<a href="#">联系我们</a>
 	</div>
-<!-- footer -->
-<div class="footer">
-	<p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 京ICP备12022216号-2 | 购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
-	<span>中酒时代酒业（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      地址：北京市朝阳区百子湾路16号百子园5号楼A单元106号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         电话：010-87703553</span>
-	<div class="beian">
-		<img src="../img/beian.jpg" alt="">
+	<!-- footer -->
+	<div class="footer">
+		<p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 京ICP备12022216号-2 | 购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
+		<span>中酒时代酒业（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      地址：北京市朝阳区百子湾路16号百子园5号楼A单元106号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         电话：010-87703553</span>
+		<div class="beian">
+			<img src="../img/beian.jpg" alt="">
+		</div>
 	</div>
-</div>
+	<!-- 楼梯 -->
+	<div class="shopLayer">
+		<ul>
+			<li >1F<span class="current">品牌特卖</span></li>
+			<li>2F<span>限时特购</span></li>
+			<li>3F<span>白酒</span></li>
+			<li>4F<span>红酒</span></li>
+			<li>5F<span>洋酒</span></li>
+			<li>6F<span>其他</span></li>
+		</ul>
+		<!-- <span class="current">1F</span>
+		<span>2F</span>
+		<span>3F</span>
+		<span>4F</span>
+		<span>5F</span>
+		<span>6F</span> -->
+	</div>
 </body>
 </html>

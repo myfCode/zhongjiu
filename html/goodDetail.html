@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
 	<link rel="stylesheet" type="text/css" href="../css/goodDetail.css">
 	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
+	<script type="text/javascript" src="../libs/jquery.cookie.js"></script>
 	<script type="text/javascript" src="../js/goodDetail.js"></script>
 </head>
 <body>
@@ -466,11 +467,7 @@
 				<div class="det_mid_img">
 					<ul>
 						<li class="borderColor"><img src="../img/detail1.jpg" alt=""></li>
-						<li><img src="../img/detail2.jpg" alt=""></li>
-						<li><img src="../img/detail3.jpg" alt=""></li>
-						<li><img src="../img/detail4.jpg" alt=""></li>
-						<li><img src="../img/detail5.jpg" alt=""></li>
-						<li><img src="../img/detail6.jpg" alt=""></li>
+						
 					</ul>
 				</div>
 				<span class="rightBtn"></span>
@@ -485,21 +482,21 @@
 			<table>
 				<thead>
 					<tr>
-						<td colspan="2"><h2>52°五粮液 500ml</h2></td>
+						<td colspan="2" class="name" id="good1"><h2>52°五粮液 500ml</h2></td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr class="silverColor">
 						<td class="first">中酒价：</td>
-						<td class="second redColor"><span class="redColor price">￥<b>729.00</b></span></td>
+						<td class="second"><span class="redColor price ">￥<b class="winePrice">729.00</b></span></td>
 					</tr>
 					<tr class="silverColor">
 						<td>促&nbsp;&nbsp;&nbsp;&nbsp;销：</td>
-						<td  class="redColor"><span class="redColor">特价</span></td>
+						<td ><span class="redColor">特价</span></td>
 					</tr>
 					<tr class="silverColor">
 						<td></td>
-						<td class="redColor"><span class="redColor"><a href="javascript:;">满立减</a>满729.0元减50元</span></td>
+						<td><span class="redColor"><a href="javascript:;">满立减</a>满729.0元减50元</span></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -523,8 +520,7 @@
 					</tr>
 					<tr class="silverColor">
 						<td>温馨提示：</td>
-						<td>1.
-满99在线支付享9.9折优惠；</td>
+						<td>1.满99在线支付享9.9折优惠；</td>
 					</tr>
 					<tr class="silverColor">
 						<td></td>
@@ -536,14 +532,545 @@
 					</tr>
 					<tr class="silverColor">
 						<td></td>
-						<td>4.七天无条件退货</td>
+						<td >4.七天无条件退货</td>
 					</tr>
-				</tbody>
-				
+				</tbody>		
 			</table>
+			<div class="buy">
+				
+				<div class="num">
+					<input type="text" name="" value="1">
+					<div class="mount">
+						<a class="increase" href="javascript:;">+</a>
+						<a class="decrease" href="javascript:;">-</a>
+					</div>
+				</div>
+				<a class="addCart" href="javascript:;"><span class="icon_cart"></span>加入购物车</a>
+				<a class="purchase" href="myCart.html">立即购买</a>
+				 （每个ID限量12套）
+			</div> 
+			
+			
 		</div>
-		<div class="details_r"></div>
+		<div class="details_r">
+			<div class="wuliangye_logo">
+				<img src="../img/wuliangye_logo.jpg" alt="">
+			</div>
+			<div class="score">
+				<p>会员评分</p>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+			<div class="buyRate">
+				<img src="../img/buyrate.png" alt="">
+				<p>会员购买率</p>
+			</div>
+			<div class="app">
+				<img src="../img/downApp.png" alt="">
+				<p>下载中酒网手机客户端<br />随时抢美酒</p>
+			</div>
+		</div>
 	</div>
-	<div class="intro wrap"></div>
+	<div class="info wrap clear">
+		<div class="info_l">
+			<div class="view">
+				<p class="info_l_title">看过的本品还买过</p>
+				<ul class="view_list">
+					<li><a href="">
+						<img src="../img/view1.jpg" alt="">
+						52°五粮液1618 500ml
+						<p>累计评价：<span>2043</span></p>
+						<span>￥ 729.00</span>
+						<a class="info_addCart" href="javascript:;">加入购物车</a>
+					</a></li>
+					<li><a href="">
+						<img src="../img/view2.jpg" alt="">
+						68°五粮液 500ml
+						<p>累计评价：<span>2288</span></p>
+						<span>￥ 719.00</span>
+						<a class="info_addCart" href="javascript:;">加入购物车</a>
+					</a></li>
+					<li class="last"><a href="">
+						<img src="../img/view3.jpg" alt="">
+						43°国窖1573 500ml
+						<p>累计评价：<span>339</span></p>
+						<span>￥ 729.00</span>
+						<a class="info_addCart" href="javascript:;">加入购物车</a>
+					</a></li>
+				</ul>
+			</div>
+			<div class="hotSales">
+				<p class="info_l_title">热销排行榜</p>
+				<dl class="hot_list">
+					<dt>
+						<span class="list_num">1</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">1</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">2</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">2</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">3</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">3</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">4</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">4</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">5</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">5</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">6</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">6</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">7</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">7</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">8</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">8</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">9</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">9</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+					<dt>
+						<span class="list_num">10</span>
+						<p>42°牛栏山陈酿 500ml</p>
+					</dt>
+					<dd>
+						<a href="">
+							<div class="dd_img">
+								<span class="list_num list_num_dd">10</span>
+								<img src="../img/niulansh.jpg">
+							</div>
+							<p>42°牛栏山陈酿 500ml</p>
+							<span>￥ 39.00</span>
+						</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="info_r">
+			<div class="tab_box">
+				<div class="tab_box_r">
+					<a class="addCart_tab" href=""><span class="icon_cart_small"></span>加入购物车</a>
+					<a class="codeShow" href="">客户端首单<span class="redColor">立减5元</span></a>
+					<span class="icon_mobile"></span><span class="icon_move"></span>
+					<div class="scanCode">
+						<img src="../img/downApp.png">
+					</div>
+				</div>
+				<ul class="tab">
+					<li class="change">商品介绍</li>
+					<li>商品评价(100%)</li>
+					<li>中酒服务</li>
+				</ul>	
+			</div> 
+			<div class="intro">
+				<div class="information">
+					<ul class="clear">
+						<li>储藏条件：恒温恒湿 避光避震</li>
+						<li>品牌：五粮液</li>
+						<li>香型：浓香型</li>
+						<li>生产厂家：宜宾五粮液股份有限公司</li>
+						<li>产地：四川</li>
+						<li>原料：水、高粱、大米、糯米等</li>
+						<li>酒精度：52%vol</li>
+						<li>净含量：500ml</li>
+					</ul>
+				</div>
+				<div class="activity">
+					<p class="activity_title"><span>推荐活动&商品</span></p>
+					<div class="fanchang">
+						<a href=""><img src="../img/fanchang.jpg" alt=""></a>
+						<a href=""><img src="../img/fenghui.jpg" alt=""></a>
+					</div>
+					<div class="huodong">
+						<ul class="clear">
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="sales"><img src="../img/sales1.png" alt=""></div>
+									<img class="wineImg" src="../img/timebuy1.jpg" alt="">
+									<div class="namePrice">
+										<p>欧菲干红葡萄酒 750ml(6瓶装)</p>
+										<span class="price">￥189.00</span><span class="buyBtn">立即抢购</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div class="feature">
+					<p  class="activity_title"><span>商品特点</span></p>
+					<img src="../img/wuliangye52du_01.jpg" alt="">
+					<img src="../img/wuliangye52du_02.jpg" alt="">
+					<img src="../img/wuliangye52du_03.jpg" alt="">
+					<img src="../img/wuliangye52du_06.jpg" alt="">
+					<img src="../img/wuliangye52du_07.jpg" alt="">
+					<img src="../img/wuliangye52du_08.jpg" alt="">
+				</div>
+				<div class="">
+					<p  class="activity_title"><span>商品评价</span></p>
+				</div>
+			</div>
+			<div class="evalute">
+				<div class="impression">
+					<div class="imp_l">
+						<span><b>100</b>%</span>
+						<p>好评率</p>
+					</div>
+					<div class="imp_r">
+						<span>大家印象</span>
+						<ul>
+							<li>包装结实</li>
+							<li>是正品</li>
+							<li>快递不错</li>
+							<li>质量好</li>
+							<li>入口绵柔</li>
+							<li>服务态度好</li>
+							<li>不上头</li>
+							<li>大品牌</li>
+							<li>上档次</li>
+							<li>外形精美</li>
+							<li>价格实惠</li>
+							<li>没有破损</li>
+							<li>工艺精湛</li>
+							<li>品质保障</li>
+							<li>味道纯正</li>
+							<li>酒香浓郁</li>
+							<li>称心如意</li>
+							<li>性价比高</li>
+							<li>安全到达</li>
+							<li>正品保真</li>
+							<li>精致LOGO</li>
+							<li>年份原浆</li>
+						</ul>
+					</div>
+				</div>
+				<div class="comment">
+					<div class="comment_tab">
+						<ul class="tab">
+							<li class="change">全部评价</li>
+							<li>好评</li>
+							<li>中评</li>
+							<li>差评</li>
+						</ul>	
+					</div> 
+					<div class="comment_all">
+						<ul class="commentsAll">
+							<li>
+								<dl>
+									<dt>
+										<img src="../img/buyer.png" alt="">
+										<p>XXXXXXXX***</p>
+									</dt>
+									<dd>
+										<p><span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span></p>
+										<span>还行吧，真假看出来，已经送人了。。。</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<img src="../img/buyer.png" alt="">
+										<p>XXXXXXXX***</p>
+									</dt>
+									<dd>
+										<p><span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span></p>
+										<span>还行吧，真假看出来，已经送人了。。。</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<img src="../img/buyer.png" alt="">
+										<p>XXXXXXXX***</p>
+									</dt>
+									<dd>
+										<p><span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span></p>
+										<span>还行吧，真假看出来，已经送人了。。。</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<img src="../img/buyer.png" alt="">
+										<p>XXXXXXXX***</p>
+									</dt>
+									<dd>
+										<p><span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span></p>
+										<span>还行吧，真假看出来，已经送人了。。。</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<img src="../img/buyer.png" alt="">
+										<p>XXXXXXXX***</p>
+									</dt>
+									<dd>
+										<p><span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span>
+										<span class="icon_star"></span></p>
+										<span>还行吧，真假看出来，已经送人了。。。</span>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="comment_good"></div>
+					<div class="comment_general"></div>
+					<div class="comment_bad"></div>
+				</div>
+			</div>
+			<div class="service">
+				<img src="../img/fw-img1.png" alt="">
+				<img src="../img/fw-img2.png" alt="">
+				<img src="../img/fw-img3.png" alt="">
+				<img src="../img/fw-img4.png" alt="">
+				<img src="../img/fw-img5.png" alt="">
+				<img src="../img/fw-img6.png" alt="">
+				<img src="../img/fw-img7.png" alt="">
+				<img src="../img/fw-img8.png" alt="">
+				<img src="../img/fw-img9.png" alt="">
+				<img src="../img/fw-img10.png" alt="">
+				<img src="../img/fw-img11.png" alt="">
+				<img src="../img/fw-img12.png" alt="">
+				<img src="../img/fw-img13.png" alt="">
+				<img src="../img/fw-img14.png" alt="">
+				<img src="../img/fw-img15.png" alt="">
+				<img src="../img/fw-img16.png" alt="">
+				<img src="../img/fw-img17.png" alt="">
+				<img src="../img/fw-img18.png" alt="">
+				<img src="../img/fw-img19.png" alt="">
+				<img src="../img/fw-img20.png" alt="">
+				<img src="../img/fw-img21.png" alt="">
+				<img src="../img/fw-img22.png" alt="">
+				<img src="../img/fw-img23.png" alt="">
+			</div>
+		</div>
+	</div>
+	<!--  -->
 </body>
 </html>

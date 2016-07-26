@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/register.css">
 	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
 	<script type="text/javascript" src="../js/register.js"></script>
+	<script type="text/javascript" src='../libs/jquery.cookie.js'></script>
 </head>
 <body>
 	<div class="header">
@@ -34,8 +35,8 @@
 			</div>
 			<div class="reg_form">
 				<form action="login.html">
-					<p>我已经注册，马上&nbsp;&nbsp;<a href="">登录>></a></p>
-					<input class="long" type="text" name="" placeholder="请输入手机号"><br />
+					<p>我已经注册，马上&nbsp;&nbsp;<a href="login.html" >登录>></a></p>
+					<input class="long telNum" type="text" name="" placeholder="请输入手机号" required="required"><br />
 					<div class="test clear">
 						<input class="short" type="text" placeholder="请输入验证码">
 						<ul class="code">
@@ -44,7 +45,7 @@
 							<li></li>
 							<li></li>
 						</ul>
-						<span>看不清？换一张</span>
+						<span class="next">看不清？换一张</span>
 					</div>
 					<input class="short" type="text" placeholder="请输入验证码"><input type="button" class="button" value="免费获取验证码"><br />
 					<input class="long" type="password" placeholder="请输入密码"><br />
@@ -57,9 +58,11 @@
 		
 	</div>
 	<div class="bottom">
-		<div class="wrap">
+		<div class="wrap bottom_box">
+			<div class="bottom_cont">
 				<p>Copyright&nbsp;© &nbsp;2011-2013 中酒网(www.zhongjiu.cn) &nbsp;版权所有&nbsp;&nbsp;<a href="#">京ICP备12022216号-2</a></p>
 				<span>购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</span>
+			</div>
 		</div>
 	</div>
 </body>
