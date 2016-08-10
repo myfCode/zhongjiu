@@ -1,0 +1,84 @@
+{
+	"g0":{
+		"id":1,
+		"name":"52°五粮液股份公司五星A珍品30 500ml(6瓶装)",
+		"discount":"../img/sales1",
+		"src":"../img/tuijian1.png",
+		"price":"419.00",
+		"cost":"279.00",
+		"comment":"2331",
+		"num":1,
+		"images":["../img/tuijian1.jpg","../img/tuijian11.jpg","../img/tuijian12.jpg","../img/tuijian13.jpg","../img/tuijian14.jpg"]
+	},
+	"g1":{
+		"id":2,
+		"name":"52°五粮液500ml",
+		"discount":"../img/sales2",
+		"src":"../img/tuijian2.png",
+		"price":"4374.00",
+		"cost":"279.00",
+		"comment":"729",
+		"num":1
+	},
+	"g2":{
+		"id":3,
+		"name":"52°泸州老窖(窖藏龙窖) 500ml(6瓶装)",
+		"discount":"../img/sales3",
+		"src":"../img/tuijian3.png",
+		"price":"79.00",
+		"cost":"279.00",
+		"comment":"229",
+		"num":1
+	},
+	"g3":{
+		"id":4,
+		"name":"52°汾酒封坛原酒 1500ml",
+		"discount":"../img/sales4",
+		"src":"../img/tuijian4.png",
+		"price":"99.00",
+		"cost":"279.00",
+		"comment":"405",
+		"num":1,
+		"images":["../img/tuijian4.jpg","../img/tuijian41","../img/tuijian42.jpg","../img/tuijian43.jpg","../img/tuijian44.jpg"]
+	},
+	"g4":{
+		"id":5,
+		"name":"52°五粮液华彩人生30典藏(水晶盒)500ml(2瓶装)",
+		"discount":"../img/sales5",
+		"src":"../img/tuijian5.png",
+		"price":"219.00",
+		"cost":"279.00",
+		"comment":"340",
+		"num":1
+	},
+	"g5":{
+		"id":6,
+		"name":"53°一道泓酱香老酒 500ml(6瓶装)",
+		"discount":"../img/sales6",
+		"src":"../img/tuijian6.png",
+		"price":"219.00",
+		"cost":"279.00",
+		"comment":"340",
+		"num":1
+	},
+	"g6":{
+		"id":7,
+		"name":"52°五粮液永不分离精品500ml(6瓶装)",
+		"discount":"../img/sales7",
+		"src":"../img/tuijian7.png",
+		"price":"149.00",
+		"cost":"279.00",
+		"comment":"340",
+		"num":1
+	},
+	"g7":{
+		"id":8,
+		"name":"52°泸州老窖鉴赏级酒品御藏9 1880ml*2(2坛装)",
+		"discount":"../img/sales8",
+		"src":"../img/tuijian8.png",
+		"price":"240.00",
+		"cost":"279.00",
+		"comment":"340",
+		"num":1
+	}
+}

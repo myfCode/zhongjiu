@@ -11,23 +11,17 @@ $(function(){
 	// 手机号验证
 	// var userName = null;
 	var phoneNum = '';
-	$('.icon_right').hide();
-	$('.telNum').focus(function(){
-		$(".name_wrong").hide()
-	})
 	$('.telNum').blur(function(){
 		var num = $(this).val();
 		// console.log(typeof num);
-		var pattern = /^(13[0-9]|17[0-9]|15[0-9]|18[0-9])\d{8}$/;
+		var pattern = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/;
 		// alert(1);
 		// console.log(pattern.test(num));
 		if (num == '') {
-			// alert('请输入手机号码');
-			$('.name_tips').text("请输入手机号码").parent().show();
+			alert('请输入手机号码');
 			return;
 		}else if (!pattern.test(num)) {
-			// alert('手机号输入错误，请重新输入！');
-			$('.name_tips').text("手机号码格式输入错误，请重新输入！").parent().show();
+			alert('手机号输入错误，请重新输入！');
 			return;
 		}
 		var users=$.cookie('user');
@@ -37,14 +31,13 @@ $(function(){
 			for(var j = 0 ; j < users.length ; j++){
 				var usn = users[j].split(':');
 				if (usn[0] == num) {
-					// alert('该手机号已经注册，请输入正确的手机号码！')
-					$('.name_tips').text("该手机号已经注册，请输入正确的手机号码！").parent().show();
+					alert('该手机号已经注册，请输入正确的手机号码！')
 					return ;
 				}
 			}
 			
 		}
-		$('.userName .icon_right').show();	
+			
 		login.telNum = num;
 		phoneNum = num;
 	})
@@ -57,23 +50,19 @@ $(function(){
 			var codeTmp = creatCode();
 			$(this).text(codeTmp);
 			codeTest.push($(this).text());
-			// console.log(codeTest);
+			console.log(codeTest);
 		});
-		//console.log(codeTest);
+		console.log(codeTest);
 		codeStr = codeTest.join('').toLowerCase();
 		// console.log(codeStr);
 	})
 
 	// 验证码验证
 	var codeVal = '';
-	// $(".test").focus(function(){
-	// 	$('.test_wrong').hide();
-	// })
 	$('.test input').blur(function(){
 		codeVal = $(this).val().toLowerCase();
 		if (codeVal != codeStr ) {
 			alert('验证码输入错误！');
-			// $('.test_tips').text('验证码输入错误！').parent().show();
 			return;
 		}
 		login.codeTest = true;
@@ -82,48 +71,34 @@ $(function(){
 	
 	// 密码验证
 	var passWord = '';
-	$(':password').eq(0).focus(function(){
-		$('.pwd_wrong').hide();
-	})
 	$(':password').eq(0).blur(function(){
 		var pwd = $(this).val();
 		var pattern = /^[0-9a-zA-Z]{6,12}$/
 		if (pwd == '') {
-			// alert('请输入密码');
-			$('.pwd_tips').text("请输入密码").parent().show();
+			alert('请输入密码');
 			return ; 
 		}else if (pwd.length < 6) {
-			// alert('密码必须大于6位，请重新输入！')
-			$('.pwd_tips').text("密码必须大于6位，请重新输入！").parent().show();
+			alert('密码必须大于6位，请重新输入！')
 			return;
 		}
 		if (!pattern.test(pwd)) {
-			// alert('密码必须是6~12位数字字母组成，请重新输入！')
-			$('.pwd_tips').text("密码必须是6~12位数字字母组成，请重新输入！").parent().show();
+			alert('密码必须是6~12位数字字母组成，请重新输入！')
 			return;
 		}
-		$('.pwd .icon_right').show();
 		passWord = pwd;
 		// console.log(passWord);
 	})
 
 	// 确认密码
-	$(':password').eq(1).focus(function(){
-		$('.confirmPwd_wrong').hide();
-	})
 	$(':password').eq(1).blur(function(){
 		var confirmPwd = $(this).val();
 		if (confirmPwd == '') {
-			// alert('请输入确认密码');
-			$('.confirmPwd_tips').text("请输入确认密码").parent().show();
+			alert('请输入确认密码');
 			return;
 		}else if(confirmPwd != passWord){
-			// alert("两次密码输入不一致，请重新输入！");
-			$('.confirmPwd_tips').text("两次密码输入不一致，请重新输入！").parent().show();
+			alert("两次密码输入不一致，请重新输入！");
 			return;
 		}
-		// $('.confirmPwd .icon_right').show();
-		$(this).next().show();
 		login.password = passWord;
 
 	})

@@ -1,5 +1,35 @@
 //dom加载完成执行	
 	$(document).ready(function(){
+
+
+		// 用户登录信息
+		var current = $.cookie('current');
+		if (current) {
+			$('.user').html('欢迎用户'+current).css("color","#b81c22").append($("<a class='quit' href='javascript:;'>退出登录</a>"));
+			$('.quit').css('marginLeft',20).click(function(){
+				$('.user').html('<a href="login.html">请登录</a><a href="register.html" class="login_color">注册</a>');
+			});
+
+		}
+		
+		// cart购物车
+		$('.cart').hover(function(){
+			$('.cart_down').show();
+			if($.cookie('myCart')){
+				var myCart = JSON.parse($.cookie('myCart'));
+				for(var i in myCart){
+					var html = '<li><dl id="'+i+'"><dt><img src="'+myCart[i].src+'" class="cartImg"></dt><dd><p class="cartName">'+myCart[i].name
+								+'</p><p><a href="javascript:;" class="cartRemove">删除</a><span class="cartPrice">￥'+myCart[i].price
+								+'</span> X <span class="cartNum">'+myCart[i].num+'</span> </p></dd></dl></li>'
+					$('.cartInfo').append(html);
+					}
+				}else{
+					$('.cartEmpty').show().next().hide();
+				}
+
+			},function(){
+			$('.cart_down').hide();
+		})
 		//从首页跳转至此页
 		$.ajax({
 			type:"get",
@@ -7,6 +37,7 @@
 			success:function(data){
 				var goodId = $.cookie('goodId');
 				// console.log(data[goodId]);
+				$('.name').attr('id',goodId);
 				$('.img,.showImg').attr("src",data[goodId].src);
 				$('.name h2').text(data[goodId].name);
 				$('.winePrice').text(data[goodId].price);
@@ -85,8 +116,6 @@
 		
 		
 
-
-
 		// 热销排行榜
 		$('.hot_list dt').mouseover(function(){
 			$('.hot_list dd').hide();
@@ -130,23 +159,37 @@
 			$('.tab li').removeClass('change');
 			$(this).addClass('change');
 			if ($(this).index() == 1) {
-				$('.intro,.service').hide();
+				$('.intro,.saleService').hide();
 				$('.evalute').show();
 			}else if($(this).index() == 2){
 				$('.intro,.evalute').hide();
-				$('.service').show();
+				$('.saleService').show();
 			}else{
 				$('.intro,.comments').show();
-				$('.service').hide();
+				$('.saleService').hide();
 			}
 		})
-
+		
+		//购物数量必须是数值
+//		var goodNum = 0;
+//		$('.num input').focus(function(){
+//			goodNum = $(this).val();
+//		})
+//		$('.num input').blur(function(){
+//			var value = $(this).val();
+//			alert(typeof value);
+//			if((typeof value) != "number"){
+//				//alert("数量输入错误！");
+//				$(this).val(goodNum);
+//			}
+//		})
 		// 加入购物车
 		$('.addCart,.addCart_tab').click(function(){
+			var num = $('.num input').val();
 			var myCart = $.cookie('myCart')? JSON.parse($.cookie('myCart')):{};
 			var goodId = $('thead tr td').attr('id');
 			if(goodId in myCart){
-				myCart[goodId].num++;
+				myCart[goodId].num = num;
 				$.cookie('myCart',JSON.stringify(myCart),{expires:30,path:"/"});
 				// alert(1);
 			}else{
@@ -154,19 +197,24 @@
 					"name":$('.name').text(),
 					"price":$('.winePrice').text(),
 					"src":$('.img').attr('src'),
-					"num":1
+					"num":num
 				}
 				$.cookie('myCart',JSON.stringify(myCart),{expries:30,path:"/"});
 			}
 			// console.log(JSON.parse($.cookie('myCart')));
+			$('.success').stop().show(800,function(){
+				$(this).hide();
+			});
 		})
 		// 立即购买
 		$('.purchase').click(function(e){
 			e.preventDefault();
+			var num = $('.num input').val();
+			//console.log(num);
 			var myCart = $.cookie('myCart')? JSON.parse($.cookie('myCart')):{};
 			var goodId = $('thead tr td').attr('id');
 			if(goodId in myCart){
-				myCart[goodId].num++;
+				myCart[goodId].num = num;
 				$.cookie('myCart',JSON.stringify(myCart),{expires:30,path:"/"});
 				// alert(1);
 			}else{
@@ -174,7 +222,7 @@
 					"name":$('.name').text(),
 					"price":$('.winePrice').text(),
 					"src":$('.img').attr('src'),
-					"num":1
+					"num":num
 				}
 				$.cookie('myCart',JSON.stringify(myCart),{expries:30,path:"/"});
 			}
@@ -182,7 +230,22 @@
 			location.href="myCart.html";
 		})
 
-		
+		// 商品数量增加减少
+		$('.increase').click(function(){
+			var num = $('.num input').val();
+			// console.log(num);
+			num++;
+			$('.num input').val(num);
+		})
+		$('.decrease').click(function(){
+			var num = $('.num input').val();
+			if (num == 0) {
+				num = 0;
+			}else{
+				num--;
+			}
+			$('.num input').val(num);
+		})
 	})
 
 

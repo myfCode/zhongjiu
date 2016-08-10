@@ -63,37 +63,7 @@ body{
 .icon_smile{
 	background-position: -389px -121px;
 }
-/*wrong*/
-.box{
-	position: relative;
-}
-.wrong{
-	display: none;
-	padding:5px 15px 5px 30px ;
-	color:#e20000;
-	background: #fef1f7 url(../img/icon_reg.png) no-repeat -395px -163px;
-	border:1px solid #de3a39;
-	position: absolute;
-	left:0px;
-	top:-31px;
-	border-radius: 3px;
-}
-.icon_arrow{
-	display: block;
-	width: 15px;
-	height: 7px;
-	background: url(../img/icon_reg.png) no-repeat -35px -170px;
-	position: absolute;
-	left:10px;
-	top:28px;
-}
-.icon_right{
-	display: inline-block;
-	width:18px;
-	height: 18px;
-	background: url(../img/icon_reg.png) no-repeat -175px -65px;
-	/*display: none;*/
-}
+
 /*register*/
 .register{
 	background: #f7f7f7;

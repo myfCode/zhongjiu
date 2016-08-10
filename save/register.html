@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>login</title>
+	<title>register</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<!-- <link rel="stylesheet" type="text/css" href="../css/common/reg_login.css"> -->
-	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
 	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
+	<script type="text/javascript" src="../js/register.js"></script>
 	<script type="text/javascript" src='../libs/jquery.cookie.js'></script>
-	<script type="text/javascript" src="../js/login.js"></script>
-	<!-- <script type="text/javascript" src='../js/common/reg_login.js'></script> -->
 </head>
 <body>
 	<div class="header">
@@ -18,7 +16,7 @@
 			<div class="header_l">
 				<a href="index.html"><span class="logo"></span></a>
 				<span class="line"></span>
-				<span>登录</span>
+				<span>注册</span>
 			</div>
 			<div class="header_r">
 				<span class="icon_img icon_zheng"></span>
@@ -30,25 +28,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="login">
+	<div class="register">
 		<div class="wrap clear">
-			<div class="log_img">
-				<a href=""><img src="../img/denglu.jpg" alt=""></a>
+			<div class="reg_img">
+				<a href=""><img src="../img/xinrenzhuce.jpg" alt=""></a>
 			</div>
-			<div class="log_form">
-				<form action="index.html">
-					<input class="long account" type="text" name="" placeholder="
-请输入手机号"><br />
-					<input class="long" type="password" placeholder="请输入密码"><br />		
-					<input class="checkbox" type="checkbox" name="">&nbsp;&nbsp;记住用户名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="forgetPwd">忘记密码？</a><br />
-					<input class="submit" type="submit" name="" value="登录"><a href="register.html">30秒注册>></a>
+			<div class="reg_form">
+				<form action="login.html">
+					<p>我已经注册，马上&nbsp;&nbsp;<a href="login.html" >登录>></a></p>
+					<input class="long telNum" type="text" name="" placeholder="请输入手机号" required="required"><br />
+					<div class="test clear">
+						<input class="short" type="text" placeholder="请输入验证码">
+						<ul class="code">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<span class="next">看不清？换一张</span>
+					</div>
+					<input class="short" type="text" placeholder="请输入验证码"><input type="button" class="button" value="免费获取验证码"><br />
+					<input class="long" type="password" placeholder="请输入密码"><br />
+					<input class="long" type="password" placeholder="请输入确认密码"><br />
+					<input  type="submit" value="同意协议并注册" class="submit">
 				</form>
-				<div class="cooper">
-					<p>使用合作网站账号登录</p>
-					<a href=""><span class="hezuo logo1"></span></a>
-					<a href=""><span class="hezuo logo2"></span></a>
-					<a href=""><span class="hezuo logo3"></span></a>
-				</div>
+				<a href="#">《中酒网服务条款》</a>
 			</div>
 		</div>
 		

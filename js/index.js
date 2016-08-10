@@ -3,6 +3,7 @@
 		
 		// 用户登录信息
 		var current = $.cookie('current');
+		console.log(current);
 		if (current) {
 			$('.user').html('欢迎用户'+current).css("color","#b81c22").append($("<a class='quit' href='javascript:;'>退出登录</a>"));
 			$('.quit').css('marginLeft',20).click(function(){
@@ -11,6 +12,25 @@
 
 		}
 
+		// cart购物车
+		$('.cart').hover(function(){
+			// $('.cart_down').show();
+			$('.cart_down').show().css('zIndex',9999999999);
+			if($.cookie('myCart')){
+				var myCart = JSON.parse($.cookie('myCart'));
+				for(var i in myCart){
+					var html = '<li><dl id="'+i+'"><dt><img src="'+myCart[i].src+'" class="cartImg"></dt><dd><p class="cartName">'+myCart[i].name
+								+'</p><p><a href="javascript:;" class="cartRemove">删除</a><span class="cartPrice">￥'+myCart[i].price
+								+'</span> X <span class="cartNum">'+myCart[i].num+'</span> </p></dd></dl></li>'
+					$('.cartInfo').append(html);
+				}
+				}else{
+					$('.cartEmpty').show().next().hide();
+				}
+
+			},function(){
+				$('.cart_down').hide();
+		})
 
 		//三级导航
 		// console.log($('.menu_two_ul>li').get());
@@ -119,7 +139,7 @@
 		var dateTimer = null;
 		dateTimer = setInterval(function(){
 			var date = new Date();
-			var outDate = new Date(2016,6,29);
+			var outDate = new Date(2016,6,30);
 			var timeLeft = outDate - date;
 			var day = parseInt(timeLeft / 1000 / 60 / 60 /24) ;
 			var hour = parseInt((timeLeft - day * 24*60*60 *1000) / 1000 /60/60);
@@ -140,6 +160,7 @@
 			type:'get',
 			url:"../data/whiteWine.json",
 			success:function(data){
+				// console.log(data);
 				// alert(1);
 				// 动态加载
 				// for (var i = 0 ; i < data.baopintuijian.price.length;i++) {
@@ -177,7 +198,7 @@
 			url:'../data/whiteList.json',
 			success:function(data){
 				// alert('sucess(whiteList)');
-				// console.log(data);
+				console.log(data);
 				$('.white_cont_c ul').empty();
 				for(var key in data){
 					var html = '<li id="'+key+'"><a href="goodDetail.html" target="_blank"><div class="sales"><img src="'+data[key].discount
@@ -295,7 +316,7 @@
 			type:'get',
 			url:"../data/otherWine.json",
 			success:function(data){
-//				alert(1);
+				//alert(1);
 				$('.other_tab li').mouseover(function(){
 					
 					// 白酒arrow箭头
@@ -340,15 +361,6 @@
 		$(window).scroll(function(){
 			var scrollTop = $(window).scrollTop();
 			// console.log(parseInt($(window).height()/2))
-			// for (var i = 0; i < arrTop.length; i++) {
-			// 	console.log(i);
-			// 	if (scrollTop <= arrTop[i] - parseInt($(window).height()/2) ) {
-			// 		var index = i;
-			// 		break;
-			// 	}
-			// }
-			// console.log(index);
-			// $('.shopLayer li span').removeClass('current').eq(index).addClass('current').show();
 			$('.stairs').each(function(){
 				if (scrollTop >= $(this).offset().top ) {
 					// console.log($(this).index('.stairs'));

@@ -3,8 +3,248 @@
 <head>
 	<meta charset="UTF-8">
 	<title>pay</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/pay.css">
+	<script type="text/javascript" src='../libs/jquery-1.12.3.js'></script>
+	<script type="text/javascript" src="../libs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/pay.js"></script>
 </head>
 <body>
-	
+	<div class="header">
+		<div class="wrap">
+			<div class="header_l">
+				<span class="icon_collect"></span>
+				<a href="javascript:;">收藏网站</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				欢迎来到
+				<a href="index.html" class="toIndex">中酒网</a>
+			</div>
+			<div class="header_r">
+				<ul>
+					<li class="first">[<a href="login.html" class="current">请登录</a>]&nbsp;&nbsp;&nbsp;[<a class="quit" href="javascript:;">退出</a><a class="userRegister" href="register.html">用户注册</a>]</li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">投诉直达</a></li>
+					<li><a href="">网站导航</a></li>
+					<li>订单热线：<span class="hotLine">400-798-9999</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="logo wrap clear">
+		<div class="logoImg"></div>
+		<div class="cartProcess">
+			<img src="../img/cartProcess2.png" alt="">
+		</div>
+	</div>
+	<!--订单信息-->
+	<div class="main wrap">
+		<div class="address">
+			<p class="title"><b>收货地址：</b></p>
+			<div class="content">
+				<ul class="clear">
+					<li>
+						<p>
+						<span>上海市</span>&nbsp;&nbsp; 
+						<span>宝山区</span>&nbsp;&nbsp; 
+						<span>XXX</span>
+						</p>
+						<p><span>同济之路</span></p>
+						<p>110</p>
+					</li>
+					<li></li>
+				</ul>
+				<a href="javascript:;">添加收货地址</a>
+			</div>
+			
+			<div class="add">
+				<div class="newAddress">
+					
+				</div>
+			</div>
+		</div>
+		<div class="payStyle">
+			<p class="title"><b>支付方式：</b></p>
+			<div class="content">
+				<form>
+					<input type="radio" name="pay" checked>在线支付&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;即时到帐，支持绝大多数银行借记卡及信用卡
+					<div class="plat"></div>
+					<input type="radio" name="pay">货到付款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;送货上门后再收款，支持现金（暂不接受支票）<br />
+					<input type="radio" name="pay">POS刷卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当面使用POS刷卡支付货款后验收<a href="">查看运费及运送范围</a>
+				</form>
+			</div>
+			<p class="title"><b>配送方式：</b></p>
+			<div class="content">
+				
+			</div>
+		</div>
+		<div class="invoice">
+			<p class="title"><b>发票信息：</b></p>
+			<!-- <a href="javascript:;">[修改]</a> -->
+			<div class="content">不开发票</div>
+		</div>
+		<div class="list">
+			<p class="title"><b>购物清单：</b></p>
+			<div class="content">
+				<table>
+					<thead>
+						<tr class="bg">
+							<th style="width:180px;">商品图片</th>
+							<th style="width:430px;">商品名称</th>
+							<th style="width:168px;">单价</th>
+							<th style="width:180px;">商品数量</th>
+							<th style="width:140px;">金额小计</th>
+						</tr>
+					</thead>
+						
+					<tbody>
+						<!-- <tr id="">
+							<td><img src="" class="image"> </td>
+							<td><span class="name"> </span></td>
+							<td><span class="price"> </span></td>
+							<td><span class="num"> </span></td>
+							<td><span class="sum"> </span></td>
+						</tr> -->
+					</tbody>
+					<tfoot>
+						<tr >
+							<td colspan="4" align="right" class="last">应付商品金额（不含运费）：</td>
+							<td ><b>￥<span class="total">0.00</span></b></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div class="clear"><button id="btn">提交订单</button></div>
+	</div>
+	<!-- 品质服务-->
+	<div class="service">
+		<div class="wrap serv clear">
+			<dl>
+				<dt class="pinzhi"></dt>
+				<dd>
+					<h2>品质保障</h2>
+					<p>厂家直接 真品防伪</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="jiulei"></dt>
+				<dd>
+					<h2>酒类O2O</h2>
+					<p>线上线下标准化</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="tuihuo"></dt>
+				<dd>
+					<h2>7天无理由退货</h2>
+					<p>拆封无条件退货</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="peisong"></dt>
+				<dd>
+					<h2>快速安全</h2>
+					<p>专业配送 安全送达</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="koubei"></dt>
+				<dd>
+					<h2>百万口碑</h2>
+					<p>400万用户的认可</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="fuwu"></dt>
+				<dd>
+					<h2>金牌服务</h2>
+					<p>7*12小时贴心服务</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- 指南guide -->
+	<div class="guideDirect">
+		<div class="wrap guide clear">
+			<div class="guide_l">
+				<ul>
+					<h3>购物指南</h3>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">会员协议</a></li>
+				</ul>
+				<ul>
+					<h3>购物配送</h3>
+					<li><a href="#">99免运费</a></li>
+					<li><a href="#">配送说明</a></li>
+					<li><a href="#">快递查询</a></li>
+					<li><a href="#">验货与签货</a></li>
+				</ul>
+				<ul>
+					<h3>支付方式</h3>
+					<li><a href="#">货到付款</a></li>
+					<li><a href="#">支付宝</a></li>
+					<li><a href="#">银联 信用卡</a></li>
+					<li><a href="#">在线支付9.9折</a></li>
+				</ul>
+				<ul>
+					<h3>售后服务</h3>
+					<li><a href="#">服务承诺</a></li>
+					<li><a href="#">退款说明</a></li>
+					<li><a href="#">退还货政策</a></li>
+					<li><a href="#">退换货流程</a></li>
+				</ul>
+				<ul>
+					<h3>服务保障</h3>
+					<li><a href="#">真品防伪,四码合一</a></li>
+					<li><a href="#">7天无条件退货</a></li>
+					<li><a href="#">7*12小时贴心服务</a></li>
+					<li><a href="#">30分钟快速响应</a></li>
+				</ul>
+			</div>
+			<span></span>
+			<div class="guide_r">
+				<dl>
+					<dt><h3>手机中酒</h3></dt>
+					<dd>
+						<img src="../img/erweima_l.jpg" alt="">
+						<p>下载移动客户端</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><h3>中酒微信</h3></dt>
+					<dd>
+						<img src="../img/erweima_r.jpg" alt="">
+						<p>中酒官方微信</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- bottom -->
+	<div class="bottom">
+		<a href="#">关于中酒</a>
+		<span>|</span>
+		<a href="#">媒体报道</a>
+		<span>|</span>
+		<a href="#">商务合作</a>
+		<span>|</span>
+		<a href="#">品牌引入</a>
+		<span>|</span>
+		<a href="#">加入中酒</a>
+		<span>|</span>
+		<a href="#">商家加盟</a>
+		<span>|</span>
+		<a href="#">联系我们</a>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<p>Copyright © 2016 中酒网(www.zhongjiu.cn) 版权所有 京ICP备12022216号-2 | 购买前请确认达到法定饮酒年龄！中酒网不销售任何含酒精产品给18岁以下人士！</p>
+		<span>中酒时代酒业（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      地址：北京市朝阳区百子湾路16号百子园5号楼A单元106号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         电话：010-87703553</span>
+		<div class="beian">
+			<img src="../img/beian.jpg" alt="">
+		</div>
+	</div>
 </body>
 </html>
